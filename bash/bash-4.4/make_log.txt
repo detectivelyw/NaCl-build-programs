@@ -1,0 +1,491 @@
+rm -f mksyntax
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING  -g -DCROSS_COMPILING -o mksyntax ./mksyntax.c 
+rm -f syntax.c
+./mksyntax -o syntax.c
+/bin/sh ./support/mkversion.sh -b -S . -s release -d 4.4 -o newversion.h \
+		&& mv newversion.h version.h
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING -DBUILDTOOL -c -o buildversion.o ./version.c
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING  -g -DCROSS_COMPILING -o bashversion ./support/bashversion.c buildversion.o 
+
+	  ***********************************************************
+	  *                                                         *
+	  * GNU bash, version 4.4.0(1)-release (x86_64-pc-none)
+	  *                                                         *
+	  ***********************************************************
+
+rm -f shell.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c shell.c
+rm -f eval.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c eval.c
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/builtins'
+rm -f mkbuiltins.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -DCROSS_COMPILING mkbuiltins.c
+gcc  -g -DCROSS_COMPILING -o mkbuiltins mkbuiltins.o 
+./mkbuiltins -externfile builtext.h -structfile builtins.c \
+	    -noproduction -D .   ./alias.def ./bind.def ./break.def ./builtin.def ./caller.def ./cd.def ./colon.def ./command.def ./declare.def ./echo.def ./enable.def ./eval.def ./getopts.def ./exec.def ./exit.def ./fc.def ./fg_bg.def ./hash.def ./help.def ./history.def ./jobs.def ./kill.def ./let.def ./read.def ./return.def ./set.def ./setattr.def ./shift.def ./source.def ./suspend.def ./test.def ./times.def ./trap.def ./type.def ./ulimit.def ./umask.def ./wait.def ./reserved.def ./pushd.def ./shopt.def ./printf.def ./complete.def ./mapfile.def
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/builtins'
+rm -f y.tab.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c y.tab.c
+rm -f general.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c general.c
+rm -f make_cmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c make_cmd.c
+rm -f print_cmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c print_cmd.c
+rm -f dispose_cmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c dispose_cmd.c
+rm -f execute_cmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c execute_cmd.c
+rm -f variables.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c variables.c
+rm -f copy_cmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c copy_cmd.c
+rm -f error.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c error.c
+rm -f expr.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c expr.c
+rm -f flags.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c flags.c
+rm -f nojobs.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c nojobs.c
+rm -f subst.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c subst.c
+rm -f hashcmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c hashcmd.c
+rm -f hashlib.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c hashlib.c
+rm -f mailcheck.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c mailcheck.c
+rm -f mksignames.o
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING -DBUILDTOOL -c ./support/mksignames.c
+rm -f buildsignames.o
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING -DBUILDTOOL -o buildsignames.o -c ./support/signames.c
+rm -f mksignames
+gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -DCROSS_COMPILING  -g -DCROSS_COMPILING -o mksignames mksignames.o buildsignames.o 
+rm -f lsignames.h
+./mksignames lsignames.h
+if cmp -s lsignames.h signames.h ; then :; else rm -f signames.h ; cp lsignames.h signames.h ; fi
+rm -f trap.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c trap.c
+rm -f input.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c input.c
+rm -f unwind_prot.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c unwind_prot.c
+rm -f pathexp.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c pathexp.c
+rm -f sig.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c sig.c
+rm -f test.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c test.c
+rm -f version.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c version.c
+rm -f alias.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c alias.c
+rm -f array.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c array.c
+rm -f arrayfunc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c arrayfunc.c
+rm -f assoc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c assoc.c
+rm -f braces.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c braces.c
+rm -f bracecomp.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c bracecomp.c
+rm -f bashhist.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c bashhist.c
+rm -f bashline.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c bashline.c
+rm -f list.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c list.c
+rm -f stringlib.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c stringlib.c
+rm -f locale.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c locale.c
+rm -f findcmd.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c findcmd.c
+rm -f redir.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c redir.c
+rm -f pcomplete.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c pcomplete.c
+rm -f pcomplib.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c pcomplib.c
+rm -f syntax.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c syntax.c
+rm -f xmalloc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c xmalloc.c
+rm -f signames.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -DPROGRAM='"bash"' -DCONF_HOSTTYPE='"x86_64"' -DCONF_OSTYPE='"none"' -DCONF_MACHTYPE='"x86_64-pc-none"' -DCONF_VENDOR='"pc"' -DLOCALEDIR='"/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/share/locale"' -DPACKAGE='"bash"' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib   -g -O2 -Wno-parentheses -Wno-format-security -c ./support/signames.c
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/builtins'
+rm -f builtins.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security builtins.c
+rm -f alias.o
+./mkbuiltins -D . alias.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security alias.c || ( rm -f alias.c ; exit 1 )
+rm -f alias.c
+rm -f bind.o
+./mkbuiltins -D . bind.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security bind.c || ( rm -f bind.c ; exit 1 )
+rm -f bind.c
+rm -f break.o
+./mkbuiltins -D . break.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security break.c || ( rm -f break.c ; exit 1 )
+rm -f break.c
+rm -f builtin.o
+./mkbuiltins -D . builtin.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security builtin.c || ( rm -f builtin.c ; exit 1 )
+rm -f builtin.c
+rm -f caller.o
+./mkbuiltins -D . caller.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security caller.c || ( rm -f caller.c ; exit 1 )
+rm -f caller.c
+rm -f cd.o
+./mkbuiltins -D . cd.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security cd.c || ( rm -f cd.c ; exit 1 )
+rm -f cd.c
+rm -f colon.o
+./mkbuiltins -D . colon.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security colon.c || ( rm -f colon.c ; exit 1 )
+rm -f colon.c
+rm -f command.o
+./mkbuiltins -D . command.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security command.c || ( rm -f command.c ; exit 1 )
+rm -f command.c
+rm -f common.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security common.c
+rm -f declare.o
+./mkbuiltins -D . declare.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security declare.c || ( rm -f declare.c ; exit 1 )
+rm -f declare.c
+rm -f echo.o
+./mkbuiltins -D . echo.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security echo.c || ( rm -f echo.c ; exit 1 )
+rm -f echo.c
+rm -f enable.o
+./mkbuiltins -D . enable.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security enable.c || ( rm -f enable.c ; exit 1 )
+rm -f enable.c
+rm -f eval.o
+./mkbuiltins -D . eval.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security eval.c || ( rm -f eval.c ; exit 1 )
+rm -f eval.c
+rm -f evalfile.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security evalfile.c
+rm -f evalstring.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security evalstring.c
+rm -f exec.o
+./mkbuiltins -D . exec.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security exec.c || ( rm -f exec.c ; exit 1 )
+rm -f exec.c
+rm -f exit.o
+./mkbuiltins -D . exit.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security exit.c || ( rm -f exit.c ; exit 1 )
+rm -f exit.c
+rm -f fc.o
+./mkbuiltins -D . fc.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security fc.c || ( rm -f fc.c ; exit 1 )
+rm -f fc.c
+rm -f fg_bg.o
+./mkbuiltins -D . fg_bg.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security fg_bg.c || ( rm -f fg_bg.c ; exit 1 )
+rm -f fg_bg.c
+rm -f hash.o
+./mkbuiltins -D . hash.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security hash.c || ( rm -f hash.c ; exit 1 )
+rm -f hash.c
+rm -f help.o
+./mkbuiltins -D . help.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security help.c || ( rm -f help.c ; exit 1 )
+rm -f help.c
+rm -f history.o
+./mkbuiltins -D . history.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security history.c || ( rm -f history.c ; exit 1 )
+rm -f history.c
+rm -f jobs.o
+./mkbuiltins -D . jobs.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security jobs.c || ( rm -f jobs.c ; exit 1 )
+rm -f jobs.c
+rm -f kill.o
+./mkbuiltins -D . kill.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security kill.c || ( rm -f kill.c ; exit 1 )
+rm -f kill.c
+rm -f let.o
+./mkbuiltins -D . let.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security let.c || ( rm -f let.c ; exit 1 )
+rm -f let.c
+rm -f mapfile.o
+./mkbuiltins -D . mapfile.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security mapfile.c || ( rm -f mapfile.c ; exit 1 )
+rm -f mapfile.c
+rm -f pushd.o
+./mkbuiltins -D . pushd.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security pushd.c || ( rm -f pushd.c ; exit 1 )
+rm -f pushd.c
+rm -f read.o
+./mkbuiltins -D . read.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security read.c || ( rm -f read.c ; exit 1 )
+rm -f read.c
+rm -f return.o
+./mkbuiltins -D . return.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security return.c || ( rm -f return.c ; exit 1 )
+rm -f return.c
+rm -f set.o
+./mkbuiltins -D . set.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security set.c || ( rm -f set.c ; exit 1 )
+rm -f set.c
+rm -f setattr.o
+./mkbuiltins -D . setattr.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security setattr.c || ( rm -f setattr.c ; exit 1 )
+rm -f setattr.c
+rm -f shift.o
+./mkbuiltins -D . shift.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security shift.c || ( rm -f shift.c ; exit 1 )
+rm -f shift.c
+rm -f source.o
+./mkbuiltins -D . source.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security source.c || ( rm -f source.c ; exit 1 )
+rm -f source.c
+rm -f suspend.o
+./mkbuiltins -D . suspend.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security suspend.c || ( rm -f suspend.c ; exit 1 )
+rm -f suspend.c
+rm -f test.o
+./mkbuiltins -D . test.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security test.c || ( rm -f test.c ; exit 1 )
+rm -f test.c
+rm -f times.o
+./mkbuiltins -D . times.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security times.c || ( rm -f times.c ; exit 1 )
+rm -f times.c
+rm -f trap.o
+./mkbuiltins -D . trap.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security trap.c || ( rm -f trap.c ; exit 1 )
+rm -f trap.c
+rm -f type.o
+./mkbuiltins -D . type.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security type.c || ( rm -f type.c ; exit 1 )
+rm -f type.c
+gcc  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -DCROSS_COMPILING  -g -DCROSS_COMPILING -o psize.aux ./psize.c
+/bin/sh ./psize.sh > pipesize.h
+rm -f ulimit.o
+./mkbuiltins -D . ulimit.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security ulimit.c || ( rm -f ulimit.c ; exit 1 )
+rm -f ulimit.c
+rm -f umask.o
+./mkbuiltins -D . umask.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security umask.c || ( rm -f umask.c ; exit 1 )
+rm -f umask.c
+rm -f wait.o
+./mkbuiltins -D . wait.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security wait.c || ( rm -f wait.c ; exit 1 )
+rm -f wait.c
+rm -f getopts.o
+./mkbuiltins -D . getopts.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security getopts.c || ( rm -f getopts.c ; exit 1 )
+rm -f getopts.c
+rm -f shopt.o
+./mkbuiltins -D . shopt.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security shopt.c || ( rm -f shopt.c ; exit 1 )
+rm -f shopt.c
+rm -f printf.o
+./mkbuiltins -D . printf.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security printf.c || ( rm -f printf.c ; exit 1 )
+rm -f printf.c
+rm -f getopt.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security getopt.c
+rm -f bashgetopt.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security bashgetopt.c
+rm -f complete.o
+./mkbuiltins -D . complete.def
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I..  -I.. -I../include -I../lib -I.    -g -O2 -Wno-parentheses -Wno-format-security complete.c || ( rm -f complete.c ; exit 1 )
+rm -f complete.c
+rm -f libbuiltins.a
+x86_64-ar cr libbuiltins.a builtins.o alias.o bind.o break.o builtin.o caller.o cd.o colon.o command.o common.o declare.o echo.o enable.o eval.o evalfile.o evalstring.o exec.o exit.o fc.o fg_bg.o hash.o help.o history.o jobs.o kill.o let.o mapfile.o pushd.o read.o return.o set.o setattr.o shift.o source.o suspend.o test.o times.o trap.o type.o ulimit.o umask.o wait.o getopts.o shopt.o printf.o getopt.o bashgetopt.o complete.o
+ranlib libbuiltins.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/builtins'
+making lib/glob/libglob.a in ./lib/glob
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/glob'
+rm -f glob.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL -I. -I../.. -I../.. -I../../include -I../../lib   -g -O2 -Wno-parentheses -Wno-format-security glob.c
+rm -f strmatch.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL -I. -I../.. -I../.. -I../../include -I../../lib   -g -O2 -Wno-parentheses -Wno-format-security strmatch.c
+rm -f smatch.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL -I. -I../.. -I../.. -I../../include -I../../lib   -g -O2 -Wno-parentheses -Wno-format-security smatch.c
+rm -f xmbsrtowcs.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL -I. -I../.. -I../.. -I../../include -I../../lib   -g -O2 -Wno-parentheses -Wno-format-security xmbsrtowcs.c
+rm -f gmisc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL -I. -I../.. -I../.. -I../../include -I../../lib   -g -O2 -Wno-parentheses -Wno-format-security gmisc.c
+rm -f -f libglob.a
+x86_64-ar cr libglob.a glob.o strmatch.o smatch.o xmbsrtowcs.o gmisc.o
+test -n "ranlib" && ranlib libglob.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/glob'
+making lib/sh/libsh.a in ./lib/sh
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/sh'
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   clktck.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   clock.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   getenv.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   oslib.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   setlinebuf.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   strnlen.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   itos.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   zread.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   zwrite.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   shtty.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   shmatch.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   eaccess.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   netconn.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   netopen.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   timeval.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   makepath.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   pathcanon.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   pathphys.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   tmpfile.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   stringlist.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   stringvec.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   spell.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   shquote.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   strtrans.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   snprintf.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   mailstat.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   fmtulong.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   fmtullong.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   fmtumax.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   zcatfd.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   zmapfd.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   winsize.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   wcsdup.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   fpurge.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   zgetline.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   mbscmp.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   uconvert.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   ufuncs.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   casemod.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   input_avail.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   mbscasecmp.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   fnxform.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   unicode.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   shmbchar.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   wcsnwidth.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   mktime.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   mbschr.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -I. -I../.. -I../.. -I../../lib -I../../include -I.  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security   getcwd.c
+rm -f libsh.a
+x86_64-ar cr libsh.a clktck.o clock.o getenv.o oslib.o setlinebuf.o strnlen.o itos.o zread.o zwrite.o shtty.o shmatch.o eaccess.o netconn.o netopen.o timeval.o makepath.o pathcanon.o pathphys.o tmpfile.o stringlist.o stringvec.o spell.o shquote.o strtrans.o snprintf.o mailstat.o fmtulong.o fmtullong.o fmtumax.o zcatfd.o zmapfd.o winsize.o wcsdup.o fpurge.o zgetline.o mbscmp.o uconvert.o ufuncs.o casemod.o input_avail.o mbscasecmp.o fnxform.o unicode.o shmbchar.o wcsnwidth.o mktime.o mbschr.o getcwd.o
+test -n "ranlib" && ranlib libsh.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/sh'
+making lib/readline/libreadline.a in ./lib/readline
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/readline'
+rm -f readline.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security readline.c
+rm -f vi_mode.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security vi_mode.c
+rm -f funmap.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security funmap.c
+rm -f keymaps.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security keymaps.c
+rm -f parens.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security parens.c
+rm -f search.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security search.c
+rm -f rltty.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security rltty.c
+rm -f complete.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security complete.c
+rm -f bind.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security bind.c
+rm -f isearch.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security isearch.c
+rm -f display.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security display.c
+rm -f signals.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security signals.c
+rm -f util.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security util.c
+rm -f kill.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security kill.c
+rm -f undo.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security undo.c
+rm -f macro.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security macro.c
+rm -f input.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security input.c
+rm -f callback.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security callback.c
+rm -f terminal.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security terminal.c
+rm -f text.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security text.c
+rm -f nls.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security nls.c
+rm -f misc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security misc.c
+rm -f history.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security history.c
+rm -f histexpand.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security histexpand.c
+rm -f histfile.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security histfile.c
+rm -f histsearch.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security histsearch.c
+rm -f shell.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security shell.c
+rm -f savestring.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security savestring.c
+rm -f mbutil.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security mbutil.c
+rm -f tilde.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security -DREADLINE_LIBRARY -c ./tilde.c
+rm -f colors.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security colors.c
+rm -f parse-colors.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security parse-colors.c
+rm -f xmalloc.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security xmalloc.c
+rm -f xfree.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security xfree.c
+rm -f compat.o
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -DHAVE_CONFIG_H -DSHELL   -I. -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I../.. -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security compat.c
+rm -f libreadline.a
+x86_64-ar cr libreadline.a readline.o vi_mode.o funmap.o keymaps.o parens.o search.o rltty.o complete.o bind.o isearch.o display.o signals.o util.o kill.o undo.o macro.o input.o callback.o terminal.o text.o nls.o misc.o history.o histexpand.o histfile.o histsearch.o shell.o savestring.o mbutil.o tilde.o colors.o parse-colors.o xmalloc.o xfree.o compat.o 
+test -n "ranlib" && ranlib libreadline.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/readline'
+making lib/readline/libhistory.a in ./lib/readline
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/readline'
+rm -f libhistory.a
+x86_64-ar cr libhistory.a history.o histexpand.o histfile.o histsearch.o shell.o savestring.o mbutil.o xmalloc.o xfree.o
+test -n "ranlib" && ranlib libhistory.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/readline'
+making lib/termcap/libtermcap.a in ./lib/termcap
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/termcap'
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -g -O2 -Wno-parentheses -Wno-format-security -DHAVE_CONFIG_H  -I. -I../.. -I../.. -I../../lib -I. termcap.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c -g -O2 -Wno-parentheses -Wno-format-security -DHAVE_CONFIG_H  -I. -I../.. -I../.. -I../../lib -I. tparam.c
+rm -f -f libtermcap.a
+x86_64-ar cr libtermcap.a termcap.o tparam.o
+test -n "ranlib" && ranlib libtermcap.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/termcap'
+making lib/tilde/libtilde.a in ./lib/tilde
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/tilde'
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -c  -DHAVE_CONFIG_H -DSHELL  -I. -I../.. -I../.. -I../../include -I../../lib  -g -O2 -Wno-parentheses -Wno-format-security tilde.c
+rm -f libtilde.a
+x86_64-ar cr libtilde.a tilde.o
+test -n "ranlib" && ranlib libtilde.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/tilde'
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/malloc'
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -I. -I../.. -I../.. -I../../include -I../../lib  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security -DRCHECK -Dbotch=programming_error   -c malloc.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -I. -I../.. -I../.. -I../../include -I../../lib  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security -DRCHECK -Dbotch=programming_error   -c trace.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -I. -I../.. -I../.. -I../../include -I../../lib  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security -DRCHECK -Dbotch=programming_error   -c stats.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -I. -I../.. -I../.. -I../../include -I../../lib  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security -DRCHECK -Dbotch=programming_error   -c table.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc  -I. -I../.. -I../.. -I../../include -I../../lib  -DHAVE_CONFIG_H -DSHELL  -g -O2 -Wno-parentheses -Wno-format-security -DRCHECK -Dbotch=programming_error   -c watch.c
+rm -f libmalloc.a
+x86_64-ar cr libmalloc.a malloc.o  trace.o stats.o table.o watch.o
+test -n "ranlib" && ranlib libmalloc.a
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/lib/malloc'
+rm -f bash
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -L./builtins -L./lib/readline -L./lib/readline -L./lib/glob -L./lib/tilde -L./lib/malloc -L./lib/sh -L./lib/termcap    -g -O2 -Wno-parentheses -Wno-format-security -o bash shell.o eval.o y.tab.o general.o make_cmd.o print_cmd.o  dispose_cmd.o execute_cmd.o variables.o copy_cmd.o error.o expr.o flags.o nojobs.o subst.o hashcmd.o hashlib.o mailcheck.o trap.o input.o unwind_prot.o pathexp.o sig.o test.o version.o alias.o array.o arrayfunc.o assoc.o braces.o bracecomp.o bashhist.o bashline.o  list.o stringlib.o locale.o findcmd.o redir.o pcomplete.o pcomplib.o syntax.o xmalloc.o signames.o -lbuiltins -lglob -lsh -lreadline -lhistory ./lib/termcap/libtermcap.a -ltilde -lmalloc    -ldl 
+ls -l bash
+-rwxrwxr-x 1 liyiwen liyiwen 3598517 Jul 27 15:16 bash
+: bash
+make[1]: Entering directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/support'
+rm -f man2html.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I..   -g man2html.c
+gcc  -DHAVE_CONFIG_H -DSHELL  -I/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4 -I..   -g man2html.o -o man2html -ldl 		
+make[1]: Leaving directory `/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/nacl-build/bash-4.4/support'
